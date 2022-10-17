@@ -42,52 +42,52 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sdl.Core.Globalization, Version=1.8.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.Core.Globalization">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.Core.Globalization.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.Desktop.IntegrationApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.Desktop.IntegrationApi">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.Desktop.IntegrationApi.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.Desktop.IntegrationApi.Extensions, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.Desktop.IntegrationApi.Extensions">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.Desktop.IntegrationApi.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.FileTypeSupport.Framework.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.FileTypeSupport.Framework.Core">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.FileTypeSupport.Framework.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.FileTypeSupport.Framework.Core.Settings, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.FileTypeSupport.Framework.Core.Settings">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.FileTypeSupport.Framework.Core.Settings.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.FileTypeSupport.Framework.Core.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.FileTypeSupport.Framework.Core.Utilities">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.FileTypeSupport.Framework.Core.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.FileTypeSupport.Framework.Implementation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.FileTypeSupport.Framework.Implementation">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.FileTypeSupport.Framework.Implementation.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.ProjectAutomation.Core, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.ProjectAutomation.Core">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.ProjectAutomation.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.ProjectAutomation.FileBased, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.ProjectAutomation.FileBased">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.ProjectAutomation.FileBased.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.ProjectAutomation.Settings, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.ProjectAutomation.Settings">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.ProjectAutomation.Settings.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.TranslationStudioAutomation.IntegrationApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.TranslationStudioAutomation.IntegrationApi">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.TranslationStudioAutomation.IntegrationApi.dll</HintPath>
     </Reference>
-    <Reference Include="Sdl.TranslationStudioAutomation.IntegrationApi.Extensions, Version=16.0.0.0, Culture=neutral, PublicKeyToken=c28cdb26c445c888, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Sdl.TranslationStudioAutomation.IntegrationApi.Extensions">
+      
       <HintPath>$(MSBuildProgramFiles32)\Trados\Trados Studio\Studio17\Sdl.TranslationStudioAutomation.IntegrationApi.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
