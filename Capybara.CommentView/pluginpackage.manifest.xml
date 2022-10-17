@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginPackage xmlns="http://www.sdl.com/Plugins/PluginPackage/1.0">
   <PlugInName>Comment View Plugin</PlugInName>
-  <Version>1.7.0.0</Version>
+  <Version>2.7.0.0</Version>
   <Description>Comment View Plugin</Description>
   <Author>Capybara Translation</Author>
 	<RequiredProduct name="TradosStudio" minversion="17.0" maxversion="17.9" />
