@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginPackage xmlns="http://www.sdl.com/Plugins/PluginPackage/1.0">
   <PlugInName>Comment View Plugin</PlugInName>
-  <Version>2.7.0.0</Version>
+  <Version>2.7.0.1</Version>
   <Description>Comment View Plugin</Description>
   <Author>Capybara Translation</Author>
 	<RequiredProduct name="TradosStudio" minversion="17.0" maxversion="17.9" />
   <Include>
     <File>ICSharpCode.SharpZipLib.dll</File>
+	  <File>BouncyCastle.Crypto.dll</File>
     <File>NPOI.dll</File>
     <File>NPOI.OOXML.dll</File>
     <File>NPOI.OpenXml4Net.dll</File>
