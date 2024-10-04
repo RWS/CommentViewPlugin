@@ -6,11 +6,15 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DataGridViewGrouper")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription(
+    "Comment View Plugin - Trados, adds a comment pane to the Files View in Trados Studio, allowing you to quickly locate comments within selected files"
+    + "\nCredits:"
+    + "\nThis application was originally developed by Capybara Translation."
+    + "\nFurther development and updates are being carried out by the Trados AppStore Team.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DataGridViewGrouper")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("SDL Limited as part of the RWS Holdings Plc group of companies")]
+[assembly: AssemblyProduct("Comment View Plugin - Trados")]
+[assembly: AssemblyCopyright("Copyright © 2011 - 2022 SDL Limited as part of the RWS Holdings Plc group of companies (\"RWS Group\").")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

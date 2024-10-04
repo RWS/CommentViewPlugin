@@ -13,7 +13,7 @@ namespace Capybara.CommentView
         Id = "ProjectsCommentViewPart",
         Name = "Plugin_Name",
         Description = "Plugin_Description",
-        Icon = "CommentViewPlugin_Icon")]
+        Icon = "commentView_Logo")]
     [ViewPartLayout(typeof(ProjectsController), Dock = DockType.Bottom)]
     public class ProjectsCommentViewPartController : AbstractViewPartController
     {

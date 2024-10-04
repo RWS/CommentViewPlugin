@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 using Capybara.CommentView.Models;
 using Sdl.Desktop.IntegrationApi;
 using Sdl.Desktop.IntegrationApi.Extensions;
@@ -13,7 +14,7 @@ namespace Capybara.CommentView
         Id = "FilesCommentViewPart",
         Name = "Plugin_Name",
         Description = "Plugin_Description",
-        Icon = "CommentViewPlugin_Icon")]
+        Icon = "commentView_Logo")]
     [ViewPartLayout(typeof(FilesController), Dock = DockType.Bottom)]
     class FilesCommentViewPartController : AbstractViewPartController
     {
@@ -27,6 +28,7 @@ namespace Capybara.CommentView
         {
             _commentService = new CommentService();
             var filesController = SdlTradosStudio.Application.GetController<FilesController>();
+
             filesController.SelectedFilesChanged += async (sender, args) =>
             {
                 Control.Value.ShowLoadingProgressBar(true);

@@ -4,12 +4,15 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Capybara.CommentView.Ext;
 using Capybara.CommentView.Models;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using Sdl.Desktop.IntegrationApi.Extensions;
 using Sdl.Desktop.IntegrationApi.Interfaces;
 using Sdl.TranslationStudioAutomation.IntegrationApi;
+using Sdl.TranslationStudioAutomation.IntegrationApi.Presentation.DefaultLocations;
 
 namespace Capybara.CommentView
 {
@@ -395,7 +398,7 @@ namespace Capybara.CommentView
                                 cellStyle.SetFont(font);
                                 IFont font2 = xSSFWorkbook.CreateFont();
                                 font2.FontName = "Arial Unicode MS";
-                                font2.Boldweight = 700;
+                                font2.IsBold = true;
                                 font2.Color = IndexedColors.Blue.Index;
                                 ISheet commentsSheet = xSSFWorkbook.CreateSheet("Comments");
                                 CreateCommentsSheet(commentsSheet, cellStyle);

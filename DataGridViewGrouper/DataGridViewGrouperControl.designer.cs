@@ -26,21 +26,22 @@
             this.cmbFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbFields.DropDownWidth = 120;
             this.cmbFields.FormattingEnabled = true;
-            this.cmbFields.Location = new System.Drawing.Point(70, 0);
+            this.cmbFields.Location = new System.Drawing.Point(95, 0);
+            this.cmbFields.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbFields.Name = "cmbFields";
-            this.cmbFields.Size = new System.Drawing.Size(129, 21);
+            this.cmbFields.Size = new System.Drawing.Size(204, 28);
             this.cmbFields.Sorted = true;
             this.cmbFields.TabIndex = 0;
             this.cmbFields.SelectedIndexChanged += new System.EventHandler(this.cmbFields_SelectedIndexChanged);
-            
             // 
             // chk
             // 
             this.chk.AutoSize = true;
             this.chk.Dock = System.Windows.Forms.DockStyle.Left;
             this.chk.Location = new System.Drawing.Point(0, 0);
+            this.chk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chk.Name = "chk";
-            this.chk.Size = new System.Drawing.Size(70, 20);
+            this.chk.Size = new System.Drawing.Size(95, 31);
             this.chk.TabIndex = 1;
             this.chk.Text = "Group on";
             this.chk.UseVisualStyleBackColor = true;
@@ -49,14 +50,15 @@
             // DataGridViewGrouperControl
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.cmbFields);
             this.Controls.Add(this.chk);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DataGridViewGrouperControl";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.Size = new System.Drawing.Size(209, 20);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.Size = new System.Drawing.Size(314, 31);
             this.ResumeLayout(false);
             this.PerformLayout();
 
