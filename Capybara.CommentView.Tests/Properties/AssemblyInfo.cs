@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Capybara.CommentView")]
+[assembly: AssemblyTitle("Capybara.CommentView.Tests")]
 [assembly: AssemblyDescription(
     "Comment View Plugin - Trados, adds a comment pane to the Files View in Trados Studio, allowing you to quickly locate comments within selected files"
     + "\nCredits:"
@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8e444a80-bb3c-4b1b-b473-dd23ae2b1112")]
+[assembly: Guid("177A006D-45B3-4E58-A649-AAAC5388FABA")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -36,4 +36,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("3.0.0.0")]
-[assembly: AssemblyFileVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.1.0")]

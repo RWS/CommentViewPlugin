@@ -112,7 +112,7 @@
             // 
             // targetLanguageBasedProjectEntryBindingSource
             // 
-            this.targetLanguageBasedProjectEntryBindingSource.DataSource = typeof(Capybara.CommentView.Models.TargetLanguageBasedProjectEntry);
+            this.targetLanguageBasedProjectEntryBindingSource.DataSource = typeof(Capybara.CommentView.Interfaces.TargetLanguageBasedProjectEntry);
             // 
             // rootTable
             // 

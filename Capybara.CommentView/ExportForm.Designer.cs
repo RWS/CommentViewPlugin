@@ -226,7 +226,7 @@
             // 
             // exportOptionsBindingSource
             // 
-            this.exportOptionsBindingSource.DataSource = typeof(Capybara.CommentView.Models.ExportOptions);
+            this.exportOptionsBindingSource.DataSource = typeof(Capybara.CommentView.Interfaces.ExportOptions);
             // 
             // ExportForm
             // 

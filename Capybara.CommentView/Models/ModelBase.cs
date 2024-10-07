@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Capybara.CommentView.Models
+namespace Capybara.CommentView.Interfaces
 {
     abstract public class ModelBase : INotifyPropertyChanged, IDataErrorInfo
     {

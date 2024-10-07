@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Linq;
-using Capybara.CommentView.Models;
+using Capybara.CommentView.Services;
 using Sdl.Desktop.IntegrationApi;
 using Sdl.Desktop.IntegrationApi.Extensions;
 using Sdl.Desktop.IntegrationApi.Interfaces;
@@ -18,7 +16,8 @@ namespace Capybara.CommentView
     [ViewPartLayout(typeof(FilesController), Dock = DockType.Bottom)]
     class FilesCommentViewPartController : AbstractViewPartController
     {
-        private CommentService _commentService;
+        private readonly CommentService _commentService = new CommentService(new CommentExtractorService());
+
         protected override IUIControl GetContentControl()
         {
             return Control.Value;
@@ -26,7 +25,6 @@ namespace Capybara.CommentView
 
         protected override void Initialize()
         {
-            _commentService = new CommentService();
             var filesController = SdlTradosStudio.Application.GetController<FilesController>();
 
             filesController.SelectedFilesChanged += async (sender, args) =>

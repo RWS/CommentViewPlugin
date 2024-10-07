@@ -13,7 +13,8 @@ namespace Capybara.CommentView.TellMe
             {
                 Keywords = new [] { 
                     "commentview", "comment view", "commentview documentation", "comment view documentation",
-                    "commentview plugin", "comment view plugin", "commentview trados", "comment view trados" }
+                    "commentview plugin", "comment view plugin", "commentview trados", "comment view trados",
+                    "comment"}
             },
 
             new CommentViewCommunitySupportAction()
@@ -22,7 +23,7 @@ namespace Capybara.CommentView.TellMe
                 {
                     "commentview", "comment view", "commentview community", "comment view community",
                     "commentview support", "comment view support", "commentview appstore", "comment view appstore",
-                    "commentview forum", "comment view forum" 
+                    "commentview forum", "comment view forum", "comment"
                 }
             },
 
@@ -32,7 +33,7 @@ namespace Capybara.CommentView.TellMe
                 {
                     "commentview", "comment view", "commentview source", "comment view source",
                     "commentview source code", "comment view source code", "commentview plugin", 
-                    "comment view plugin", "comment view trados", "commentview trados"
+                    "comment view plugin", "comment view trados", "commentview trados", "comment"
                 }
             },
 
@@ -41,7 +42,7 @@ namespace Capybara.CommentView.TellMe
                 Keywords = new[]
                 {
                     "commentview", "comment view", "commentview plugin", "comment view plugin",
-                    "commentview trados", "comment view trados"
+                    "commentview trados", "comment view trados", "comment"
                 }
             }
         };

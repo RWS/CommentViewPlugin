@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using Capybara.CommentView.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Sdl.ProjectAutomation.Core;
 
-namespace Capybara.CommentView.Models
+namespace Capybara.CommentView.Services
 {
-    public static class CommentExtractor
+    public class CommentExtractorService : ICommentExtractorService
     {
-        private static readonly XNamespace Sdl = @"http://sdl.com/FileTypes/SdlXliff/1.0";
-        private static readonly XNamespace Xlf = @"urn:oasis:names:tc:xliff:document:1.2";
+        private readonly XNamespace Sdl = @"http://sdl.com/FileTypes/SdlXliff/1.0";
+        private readonly XNamespace Xlf = @"urn:oasis:names:tc:xliff:document:1.2";
 
-        public static List<CommentEntry> Extract(ProjectFile projectFile)
+        public List<CommentEntry> Extract(string projectFilePath)
         {
             var commentEntries = new List<CommentEntry>();
-            using (var reader = new XmlTextReader(projectFile.LocalFilePath))
+
+            using (var reader = new XmlTextReader(projectFilePath))
             {
                 reader.XmlResolver = null;
                 while (reader.Read())
@@ -35,17 +36,17 @@ namespace Capybara.CommentView.Models
                         var srcMrks =
                             tu.Element(Xlf + "seg-source")
                                 .Descendants(Xlf + "mrk")
-                                .Where(e => ((string) e.Attribute("mtype")) == "seg");
+                                .Where(e => ((string)e.Attribute("mtype")) == "seg");
                         var trgMrks =
                             tu.Element(Xlf + "target")
                                 .Descendants(Xlf + "mrk")
-                                .Where(e => ((string) e.Attribute("mtype")) == "seg")
+                                .Where(e => ((string)e.Attribute("mtype")) == "seg")
                                 .ToList();
-                        var paragraphId = (string) tu.Attribute("id");
+                        var paragraphId = (string)tu.Attribute("id");
                         foreach (var srcMrk in srcMrks)
                         {
                             var mid = srcMrk.Attribute("mid").Value;
-                            var trgMrk = trgMrks.FirstOrDefault(e => ((string) e.Attribute("mid")) == mid);
+                            var trgMrk = trgMrks.FirstOrDefault(e => ((string)e.Attribute("mid")) == mid);
                             if (trgMrk == null)
                             {
                                 continue;
@@ -53,12 +54,12 @@ namespace Capybara.CommentView.Models
                             // Get all the comment IDs contained in the current source mrk and target mrk.
                             var commentIDs =
                                 srcMrk.Descendants(Xlf + "mrk")
-                                    .Where(e => ((string) e.Attribute("mtype") == "x-sdl-comment"))
-                                    .Select(e => (string) e.Attribute(Sdl + "cid"))
+                                    .Where(e => ((string)e.Attribute("mtype") == "x-sdl-comment"))
+                                    .Select(e => (string)e.Attribute(Sdl + "cid"))
                                     .Concat(
                                         trgMrk.Descendants(Xlf + "mrk")
-                                            .Where(e => ((string) e.Attribute("mtype") == "x-sdl-comment"))
-                                            .Select(e => (string) e.Attribute(Sdl + "cid")))
+                                            .Where(e => ((string)e.Attribute("mtype") == "x-sdl-comment"))
+                                            .Select(e => (string)e.Attribute(Sdl + "cid")))
                                     .ToList();
 
                             if (commentIDs.Count == 0)
@@ -82,31 +83,18 @@ namespace Capybara.CommentView.Models
                     }
                 }
             }
-            foreach (var commentEntry in commentEntries)
-            {
-                commentEntry.ProjectFile = projectFile;
-                commentEntry.FileName = projectFile.Folder + projectFile.Name;
-                if (string.IsNullOrEmpty(commentEntry.ParagraphId))
-                {
-                    commentEntry.ParagraphId = null;
-                    commentEntry.SegmentId = null;
-                    commentEntry.SourceSegment = null;
-                    commentEntry.TargetSegment = null;
-                    commentEntry.SourceText = null;
-                    commentEntry.TargetText = null;
-                }
-            }
+
             return commentEntries;
         }
 
-        private static List<ISegmentElement> BuildSegment(XElement mrkElement, string cid)
+        private List<ISegmentElement> BuildSegment(XElement mrkElement, string cid)
         {
             var elements = new List<ISegmentElement>();
             foreach (var textNode in mrkElement.DescendantNodes().OfType<XText>())
             {
                 var ancestors =
                     textNode.Ancestors(Xlf + "mrk")
-                        .Where(e => cid == (string) e.Attribute(Sdl + "cid"));
+                        .Where(e => cid == (string)e.Attribute(Sdl + "cid"));
                 if (ancestors.Any())
                 {
                     elements.Add(new CommentElement
@@ -126,7 +114,7 @@ namespace Capybara.CommentView.Models
         }
 
 
-        private static IEnumerable<XElement> StreamXElements(XmlTextReader reader, string name, string end)
+        private IEnumerable<XElement> StreamXElements(XmlTextReader reader, string name, string end)
         {
             while (reader.Read())
             {
@@ -152,7 +140,7 @@ namespace Capybara.CommentView.Models
             }
         }
 
-        private static List<CommentEntry> ExtractComments(XmlTextReader reader)
+        private List<CommentEntry> ExtractComments(XmlTextReader reader)
         {
             var comments = new List<CommentEntry>();
             if (reader.ReadToDescendant("cmt-defs", Sdl.NamespaceName))

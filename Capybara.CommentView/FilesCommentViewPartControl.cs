@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Capybara.CommentView.Ext;
-using Capybara.CommentView.Models;
+using Capybara.CommentView.Interfaces;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using Sdl.Desktop.IntegrationApi.Extensions;

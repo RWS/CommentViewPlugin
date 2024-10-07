@@ -1,4 +1,4 @@
-﻿namespace Capybara.CommentView.Models
+﻿namespace Capybara.CommentView.Interfaces
 {
     public class TextElement : ISegmentElement
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using Sdl.Core.Globalization;
 using Sdl.ProjectAutomation.FileBased;
 
-namespace Capybara.CommentView.Models
+namespace Capybara.CommentView.Interfaces
 {
     public class TargetLanguageBasedProjectEntry 
     {

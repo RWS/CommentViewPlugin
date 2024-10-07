@@ -220,7 +220,7 @@
             // 
             // commentEntryBindingSource
             // 
-            this.commentEntryBindingSource.DataSource = typeof(Capybara.CommentView.Models.CommentEntry);
+            this.commentEntryBindingSource.DataSource = typeof(Capybara.CommentView.Interfaces.CommentEntry);
             // 
             // mainTabControl
             // 
@@ -375,7 +375,7 @@
             // 
             // fileEntryBindingSource
             // 
-            this.fileEntryBindingSource.DataSource = typeof(Capybara.CommentView.Models.ProjectFileEntry);
+            this.fileEntryBindingSource.DataSource = typeof(Capybara.CommentView.Interfaces.ProjectFileEntry);
             // 
             // rootTable
             // 

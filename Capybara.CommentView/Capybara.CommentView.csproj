@@ -27,7 +27,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>1</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -97,9 +97,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CommentExtractor.cs" />
+    <Compile Include="Interfaces\ICommentExtractor.cs" />
+    <Compile Include="Services\CommentExtractor.cs" />
     <Compile Include="Models\CommentInfo.cs" />
-    <Compile Include="Models\CommentService.cs" />
+    <Compile Include="Services\CommentService.cs" />
     <Compile Include="Models\TargetLanguageBasedProjectEntry.cs" />
     <Compile Include="ProjectsCommentViewPartControl.cs">
       <SubType>UserControl</SubType>
@@ -127,7 +128,7 @@
     <Compile Include="Models\CommentEntry.cs" />
     <Compile Include="Models\ExportOptions.cs" />
     <Compile Include="Models\ProjectFileEntry.cs" />
-    <Compile Include="Models\ISegmentElement.cs" />
+    <Compile Include="Interfaces\ISegmentElement.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Models\TextElement.cs" />
     <Compile Include="PluginResources.Designer.cs">

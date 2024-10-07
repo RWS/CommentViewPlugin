@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using Capybara.CommentView.Models;
+using Capybara.CommentView.Interfaces;
 
 namespace Capybara.CommentView
 {

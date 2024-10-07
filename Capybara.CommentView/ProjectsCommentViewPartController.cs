@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Capybara.CommentView.Models;
+using Capybara.CommentView.Services;
 using Sdl.Desktop.IntegrationApi;
 using Sdl.Desktop.IntegrationApi.Extensions;
 using Sdl.Desktop.IntegrationApi.Interfaces;
@@ -17,11 +17,10 @@ namespace Capybara.CommentView
     [ViewPartLayout(typeof(ProjectsController), Dock = DockType.Bottom)]
     public class ProjectsCommentViewPartController : AbstractViewPartController
     {
-        private CommentService _commentService;
+        private readonly CommentService _commentService = new CommentService(new CommentExtractorService());
+
         protected override void Initialize()
         {
-            _commentService = new CommentService();
-
             var projectController = SdlTradosStudio.Application.GetController<ProjectsController>();
             projectController.SelectedProjectsChanged += async (sender, args) =>
             {

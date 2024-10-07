@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Sdl.ProjectAutomation.Core;
 
-namespace Capybara.CommentView.Models
+namespace Capybara.CommentView.Interfaces
 {
     public class ProjectFileEntry
     {
