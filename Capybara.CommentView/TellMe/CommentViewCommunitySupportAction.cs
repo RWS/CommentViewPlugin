@@ -24,7 +24,7 @@ namespace Capybara.CommentView.TellMe
 
         public override void Execute()
         {
-            Process.Start("https://appstore.rws.com/Plugin/274?tab=support");
+            Process.Start("https://community.rws.com/product-groups/trados-portfolio/rws-appstore/f");
         }
     }
 }

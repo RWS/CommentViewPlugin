@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginPackage xmlns="http://www.sdl.com/Plugins/PluginPackage/1.0">
   <PlugInName>Comment View Plugin - Trados</PlugInName>
-  <Version>3.0.0.0</Version>
+  <Version>3.0.0.1</Version>
 	<Description>
 		Comment View Plugin - Trados, adds a comment pane to the Files View in Trados Studio, allowing you to quickly locate comments within selected files
 		Credits:
