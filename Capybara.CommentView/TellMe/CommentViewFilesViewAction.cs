@@ -16,12 +16,12 @@ namespace Capybara.CommentView.TellMe
     {
         public CommentViewFilesViewAction()
         {
-            Name = "Comment View Plugin - Trados";
+            Name = "Comment View Plugin - Trados Settings";
         }
 
         public override string Category => $"{PluginResources.Plugin_Name} results";
 
-        public override Icon Icon => PluginResources.commentView_Logo;
+        public override Icon Icon => PluginResources.CommentView_Settings;
 
         public override bool IsAvailable => SdlTradosStudio.Application.GetController<FilesController>().CurrentProject != null;
 

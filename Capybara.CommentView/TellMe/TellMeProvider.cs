@@ -42,7 +42,8 @@ namespace Capybara.CommentView.TellMe
                 Keywords = new[]
                 {
                     "commentview", "comment view", "commentview plugin", "comment view plugin",
-                    "commentview trados", "comment view trados", "comment"
+                    "commentview trados", "comment view trados", "comment", "commentview settings",
+                    "comment view settings"
                 }
             }
         };
