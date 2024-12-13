@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginPackage xmlns="http://www.sdl.com/Plugins/PluginPackage/1.0">
-  <PlugInName>Comment View Plugin - Trados</PlugInName>
-  <Version>3.0.0.2</Version>
+	<PlugInName>Comment View Plugin - Trados</PlugInName>
+	<Version>3.0.1.0</Version>
 	<Description>
 		Comment View Plugin - Trados, adds a comment pane to the Files View in Trados Studio, allowing you to quickly locate comments within selected files
 		Credits:
@@ -11,13 +11,16 @@
 	</Description>
 	<Author>Trados AppStore Team</Author>
 	<RequiredProduct name="TradosStudio" minversion="18.0" maxversion="18.9" />
-  <Include>
-    <File>ICSharpCode.SharpZipLib.dll</File>
-	  <File>BouncyCastle.Crypto.dll</File>
-    <File>NPOI.dll</File>
-    <File>NPOI.OOXML.dll</File>
-    <File>NPOI.OpenXml4Net.dll</File>
-    <File>NPOI.OpenXmlFormats.dll</File>
-    <File>DataGridViewGrouper.dll</File>
-  </Include>
+	<Include>
+		<File>ICSharpCode.SharpZipLib.dll</File>
+		<File>BouncyCastle.Crypto.dll</File>
+		<File>NPOI.dll</File>
+		<File>NPOI.Core.dll</File>
+		<File>NPOI.OOXML.dll</File>
+		<File>NPOI.OpenXml4Net.dll</File>
+		<File>NPOI.OpenXmlFormats.dll</File>
+		<File>DataGridViewGrouper.dll</File>
+		<File>SixLabors.ImageSharp.dll</File>
+		<File>SixLabors.Fonts.dll</File>
+	</Include>
 </PluginPackage>

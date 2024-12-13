@@ -96,7 +96,7 @@ namespace Capybara.CommentView
             InlineRegularFont.FontName = "Segoe UI";
             InlineCommentFont.IsBold = true;
             InlineCommentFont.FontName = "Segoe UI";
-            InlineCommentFont.SetColor(new XSSFColor(Color.Blue));
+            InlineCommentFont.SetColor(new XSSFColor(SixLabors.ImageSharp.Color.Blue));
             sourceRTB.LanguageOption = RichTextBoxLanguageOptions.UIFonts;
             targetRTB.LanguageOption = RichTextBoxLanguageOptions.UIFonts;
             commentEntryBindingSource.DataSource = _commentEntries;
